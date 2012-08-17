@@ -5,4 +5,12 @@
 
 #pragma once
 
+#include <stdio.h>
+#include <iostream>
+#include <stdlib.h>
+#include <fstream>
+#include <string.h>
+#include <string>
+#include <vector>
+
 // TODO: reference additional headers your program requires here

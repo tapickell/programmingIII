@@ -1,8 +1,6 @@
 // Week2.cpp : main project file.
 
 #include "stdafx.h"
-#include <stdio.h>
-#include <iostream>
 
 using namespace std;
 using namespace System;
