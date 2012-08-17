@@ -6,11 +6,11 @@ using namespace std;
 class fileHandler
 {
 public:
-	fileHandler(void);
+	fileHandler(string);
 	~fileHandler(void);
 
 	vector<string> getFile();
-	bool putFile(vector<string>);
+	void putFile(vector<string> &);
 
 private:
 	string theFileName;

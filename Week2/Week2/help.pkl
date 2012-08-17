@@ -1,0 +1,21 @@
+Thank you for using the .pkl file appender.
+
+this is by far the least advanced text editor you
+have ever used. it has less features then notepad.
+you would be much better off to use nano, vim or even emacs.
+
+What you can do:
+write multiple lines of text out to a .pkl file.
+then view the lines you wrote with a line count.
+thats it.
+nothing else, really.
+
+What you can't do:
+open other .pkl files
+save multiple files.
+delete file contents.
+overwrite file contents.
+edit previous contents.
+anything else you would expect to do with a text editor.
+
+enjoy :P
