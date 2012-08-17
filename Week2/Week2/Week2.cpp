@@ -1,4 +1,24 @@
-// Week2.cpp : main project file.
+/* ***************************************************************************
+
+Programmer: Todd Pickell
+
+Filename: Week2.cpp
+
+Requirements: None
+
+Includes: 
+#include "StdAfx.h"
+#include "fileHandler.h"
+
+Course: Programming III
+
+Date: 8/17/12
+
+Assignment: Week 2: File Processing
+
+Description: write a program that demonstrates creating a file, reading file contents and writing to a file
+
+************************************************************************* */
 
 #include "stdafx.h"
 #include "fileHandler.h"

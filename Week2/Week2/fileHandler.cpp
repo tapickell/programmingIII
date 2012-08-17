@@ -1,3 +1,25 @@
+/* ***************************************************************************
+
+Programmer: Todd Pickell
+
+Filename: fileHandler.cpp
+
+Requirements: None
+
+Includes: 
+#include "StdAfx.h"
+#include "fileHandler.h"
+
+Course: Programming III
+
+Date: 8/17/12
+
+Assignment: Week 2: File Processing
+
+Description: write a program that demonstrates creating a file, reading file contents and writing to a file
+
+************************************************************************* */
+
 #include "StdAfx.h"
 #include "fileHandler.h"
 
