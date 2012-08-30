@@ -27,7 +27,7 @@ using namespace std;
 
 fileHandler::fileHandler(string name)
 {
-	theFileName = name;
+	theFileName = name.c_str();
 }
 
 fileHandler::~fileHandler(void)
@@ -35,43 +35,57 @@ fileHandler::~fileHandler(void)
 }
 
 
-vector<string> fileHandler::getFile()
+vector<item> fileHandler::getFile()
 {
 	ifstream inFile;
 	string fileLine;
-	vector<string> document;
+	vector<item> localStack;
 
-	inFile.open(theFileName);
-	if (inFile.is_open())
+	inFile.open(theFileName, ios::in|ios::binary);
+	if (inFile)
 	{
 		cout << "Getting file..." << endl;
 		cout << endl;
+		// not working on initial load if file is present at start
+		inFile.seekg(0);
 		while(!inFile.eof())
 		{
-			getline(inFile, fileLine);
-			document.push_back(fileLine);
+			item tempItem;
+			inFile.read(reinterpret_cast< char * >(&tempItem), sizeof(item));
+			localStack.push_back(tempItem);
 		}
 	} else {
 		ofstream newFile;
-		newFile.open(theFileName);
+		newFile.open(theFileName, ios::out|ios::binary);
 		newFile.close();
 		cout << "Creating new file..." << endl;
 		cout << endl;
-		inFile.open(theFileName);
+		inFile.open(theFileName, ios::in|ios::binary);
 	}
 	inFile.close();
-	return document;
+	if (localStack.size() > 0)
+	{
+		//removes some dirty data from end of stack
+		localStack.pop_back();
+	}
+	return localStack;
 }
 
-void fileHandler::putFile(vector<string> &fileStrings)
+void fileHandler::putFile( vector<item> &items )
 {
 	ofstream outFile;
-	outFile.open(theFileName);
-	for (int i = 0; i < fileStrings.size()-1; i++)
+	outFile.open(theFileName, ios::out|ios::binary);
+	if(!outFile)
 	{
-		outFile << fileStrings[i] << "\n";
+		cerr<<"File could not be created"<<endl;
+		system("pause");
+		exit(1);
 	}
-	//to prevent from adding extra \n every time program runs
-	outFile << fileStrings[fileStrings.size()-1];
+	for (int i = 0; i < items.size(); i++)
+	{
+
+		outFile.write(reinterpret_cast<const char *>(&items[i]), sizeof(item));
+	}
+	outFile.clear();
 	outFile.close();
 }

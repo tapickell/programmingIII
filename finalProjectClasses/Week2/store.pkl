@@ -1,4 +1,0 @@
-potato produce idohoians 3 24 1
-salsa ethnic chili's 5 12 3
-eggs dairy farmerBob 20 40 10
-Tue Aug 21 20:36:11 2012

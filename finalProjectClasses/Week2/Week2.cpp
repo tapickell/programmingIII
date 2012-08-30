@@ -23,63 +23,81 @@ Description: write a program that demonstrates creating a file, reading file con
 #include "stdafx.h"
 #include "fileHandler.h"
 
-void displayFile(vector<string> &fileStrings);
 
 using namespace std;
 using namespace System;
 
 
 int main(array<System::String ^> ^args)
-{
-	fileHandler helpFile("help.pkl");
-	displayFile(helpFile.getFile());
-	
-	//read in from file and save strings to vector
+{	
+
 	fileHandler theFile("store.pkl");
-	vector<string> fileStrings = theFile.getFile();
-	displayFile(fileStrings);
+	vector<item> itemStack = theFile.getFile();
 
-	//create objects from strings
-
-	//copy vector
-	vector<string> alteredFileStrings = fileStrings;
+	cout << "SKU  Name  Dept  Vendor    Max Order onHand" << endl;
+	cout << "-------------------------------------------" << endl;
+	for (int i = 0; i < itemStack.size(); i++)
+	{
+		cout << itemStack[i].toString() << endl;
+	}
+	vector<item> newStack;
 
 	//prompt for input
 	bool doneEditing = false;
-	cout << "Enter text separated by commas for file or type EXIT:" << endl;
-	cout << "Item Name, Item Dept, Vendor Name, Max Number, Reorder Number, OnHand Number" << endl;
+
 	while(!doneEditing)
 	{
+		int A;
+		int E;
+		int F;
+		int G;
+		string B;
+		string C;
+		string D;
 		string tempString;
-		getline(cin, tempString);
-		if (tempString != "EXIT")
+		cout << "Enter item info:" << endl << "Item SKU: ";
+		cin >> A;
+		cout << endl << "Item Name: ";
+		cin >> B;
+		cout << endl << "Item Dept: ";
+		cin >> C;
+		cout << endl << "Vendor Name: ";
+		cin >> D;
+		cout << endl << "Max Number: ";
+		cin >> E;
+		cout << endl << "Reorder Number: ";
+		cin >> F;
+		cout << endl << "OnHand Number: ";
+		cin >> G;
+		cout << endl << "Done?? Y/N: ";
+		cin >> tempString;
+		cout << endl;
+
+		item tempItem = item(A, B, C, D, E, F, G);
+		newStack.push_back(tempItem);
+		
+		if (tempString == "Y" || tempString == "y")
 		{
-			alteredFileStrings.push_back(tempString);
-		} else {
-			time_t t = time(0);
-			alteredFileStrings.push_back(ctime(&t));
 			doneEditing = true;
 		}
 	}
-	cout << "Saving text to file" << endl;
-	theFile.putFile(alteredFileStrings);
+	cout << "Saving stack to file" << endl;
+	theFile.putFile(newStack);
+	cout << "Items written to file" << endl;
 
-	//read in from altered file and save new strings to vector
-	vector<string> newFileStrings = theFile.getFile();
-	displayFile(newFileStrings);
+	vector<item> newFileStack = theFile.getFile();
+
+	cout << "After reload: " << endl;
+	cout << "SKU  Name  Dept  Vendor    Max Order onHand" << endl;
+	cout << "-------------------------------------------" << endl;
+	for (int i = 0; i < newFileStack.size(); i++)
+	{
+		cout << newFileStack[i].toString() << endl;
+	}
+
+	cout << "Thank you for using the Awesome Grocery Inventory Application" << endl;
 
 	system("PAUSE");
     return 0;
 }
 
-void displayFile(vector<string> &fileStrings)
-{
-	cout << "Line count: " << fileStrings.size() << endl;
-	cout << endl;
-	cout << "File contents:" << endl;
-	cout << endl;
-	for (int i = 0; i < fileStrings.size(); i++)
-	{
-		cout << fileStrings[i] << endl;
-	}
-}

@@ -24,13 +24,26 @@ using namespace std;
 class item
 {
 public:
-	item(string itemString);
+	item();
+	item(int sku, string name, string dept, string vendor, int max, int reorder, int onhand);
 	~item(void);
+	string toString();
+
+	int ItemSKU() const;
+	void ItemSKU(int val);
+	string ItemName() const;
+	void ItemName(string val);
+	string VendorName() const;
+	void VendorName(string val);
+	int MaxNumb() const;
+	void MaxNumb(int val);
+	int ReorderNumb() const;
+	void ReorderNumb(int val);
+	int OnHandNumb() const;
+	void OnHandNumb(int val);
 
 private:
-	int stringToNumb(string stringIn);
-	vector<string> parseString(string stringIn);
-
+	int itemSKU;
 	string itemName;
 	string itemDept;
 	string vendorName;
@@ -38,4 +51,3 @@ private:
 	int reorderNumb;
 	int onHandNumb;
 };
-

@@ -23,41 +23,47 @@ Description: write a program that demonstrates creating a file, reading file con
 
 using namespace std;
 
-item::item(string itemString)
+item::item()
 {
-	vector<string> itemArray = parseString(itemString);
-	itemName = itemArray[0];
-	itemDept = itemArray[1];
-	vendorName = itemArray[2];
-	maxNumb = stringToNumb(itemArray[3]);
-	reorderNumb = stringToNumb(itemArray[4]);
-	onHandNumb = stringToNumb(itemArray[5]);
-}
 
+};
+item::item(int sku, string name, string dept, string vendor, int max, int reorder, int onhand)
+{
+	itemSKU = sku;
+	itemName = name;
+	itemDept = dept;
+	vendorName = vendor;
+	maxNumb = max;
+	reorderNumb = reorder;
+	onHandNumb = onhand;
+}
 
 item::~item(void)
 {
 }
 
-vector<string> parseString(string stringIn)
+string item::toString()
 {
-	vector<string> myMutableArray;
-	//char str[] = stringIn;
-	char * pch;
-	pch = strtok(stringIn, ","); //use for csv format
-	while (pch != NULL)
-	{
-		myMutableArray.push_back(pch);
-		pch = strtok(NULL, ",");
-	}
-
-	vector<string> myMutableArray;
-	return myMutableArray;
+	stringstream ss;
+	ss << itemSKU << " " << itemName << " " << itemDept << " " << vendorName << "   " << maxNumb << "    " << reorderNumb << "    " << onHandNumb;
+	string s = ss.str();
+	return s;
 }
 
-int stringToNumb(string stringIn)
-{
-	stringstream streamIn(stringIn);
-	int numb;
-	return streamIn >> numb ? numb : 0;
-}
+int item::ItemSKU() const { return itemSKU; }
+void item::ItemSKU(int val) { itemSKU = val; }
+
+string item::ItemName() const { return itemName; }
+void item::ItemName(string val) { itemName = val; }
+
+string item::VendorName() const { return vendorName; }
+void item::VendorName(string val) { vendorName = val; }
+
+int item::MaxNumb() const { return maxNumb; }
+void item::MaxNumb(int val) { maxNumb = val; }
+
+int item::ReorderNumb() const { return reorderNumb; }
+void item::ReorderNumb(int val) { reorderNumb = val; }
+
+int item::OnHandNumb() const { return onHandNumb; }
+void item::OnHandNumb(int val) { onHandNumb = val; }

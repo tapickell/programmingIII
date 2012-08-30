@@ -17,6 +17,7 @@ Assignment: Week 2: File Processing
 Description: write a program that demonstrates creating a file, reading file contents and writing to a file
 
 ************************************************************************* */
+#include "item.h"
 
 using namespace std;
 
@@ -27,8 +28,8 @@ public:
 	fileHandler(string);
 	~fileHandler(void);
 
-	vector<string> getFile();
-	void putFile(vector<string> &);
+	vector<item> getFile();
+	void putFile(vector<item> &);
 
 private:
 	string theFileName;
