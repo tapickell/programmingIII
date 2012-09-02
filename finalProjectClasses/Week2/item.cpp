@@ -18,7 +18,7 @@ Description: write a program that demonstrates creating a file, reading file con
 
 ************************************************************************* */
 
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "item.h"
 
 using namespace std;
@@ -45,7 +45,7 @@ item::~item(void)
 string item::toString()
 {
 	stringstream ss;
-	ss << itemSKU << " " << itemName << " " << itemDept << " " << vendorName << "   " << maxNumb << "    " << reorderNumb << "    " << onHandNumb;
+	ss << itemSKU << "\t" << itemName << "\t" << itemDept << "\t" << vendorName << "\t" << maxNumb << "\t" << reorderNumb << "\t" << onHandNumb;
 	string s = ss.str();
 	return s;
 }

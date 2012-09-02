@@ -98,6 +98,9 @@ int main(array<System::String ^> ^args)
 	cout << "Thank you for using the Awesome Grocery Inventory Application" << endl;
 
 	system("PAUSE");
-    return 0;
+	/*return 0;   this breaks with same error as 
+				  when reading in saved file after application restart 
+				  */
+    exit(0);
 }
 

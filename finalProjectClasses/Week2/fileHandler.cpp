@@ -14,13 +14,13 @@ Course: Programming III
 
 Date: 8/17/12
 
-Assignment: Week 2: File Processing
+Assignment: Week Final: File Processing
 
 Description: write a program that demonstrates creating a file, reading file contents and writing to a file
 
 ************************************************************************* */
 
-#include "StdAfx.h"
+#include "stdafx.h"
 #include "fileHandler.h"
 
 using namespace std;
@@ -53,7 +53,8 @@ vector<item> fileHandler::getFile()
 			item tempItem;
 			inFile.read(reinterpret_cast< char * >(&tempItem), sizeof(item));
 			localStack.push_back(tempItem);
-		}
+			cout << "item added to stack" << endl;
+		} //breaks from here after reading in 1 item from saved file on reopen
 	} else {
 		ofstream newFile;
 		newFile.open(theFileName, ios::out|ios::binary);
@@ -62,6 +63,7 @@ vector<item> fileHandler::getFile()
 		cout << endl;
 		inFile.open(theFileName, ios::in|ios::binary);
 	}
+	inFile.clear();
 	inFile.close();
 	if (localStack.size() > 0)
 	{
