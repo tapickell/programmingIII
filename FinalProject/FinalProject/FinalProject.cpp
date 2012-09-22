@@ -36,14 +36,21 @@ int main(array<System::String ^> ^args)
 /* *************  _-_--_--_--_V    FILL IN METHODS BELOW HERE   V _-_--_--_--_  ************** */
 
 
-/*McKinley ********************V displayMenu method V************* DATE */
+/*McKinley ********************V displayMenu method V************* 9-21-12 */
 //returns an int and takes in no parameters
 //displays the main menu and gets users choice as an int and returns it to the calling function
 //this can use the display file method and the menu.pkl file
+int displayMenu()
+{
+    fileHandler myFile(MENUP);
+    displayFile(myFile.getFile());
 
+    int choice = 0;
+    cin >> choice;
+    return choice;
+}
 
-
-/*McKinley ********************^ displayMenu method ^************* DATE */
+/*McKinley ********************^ displayMenu method ^************* 9-21-12 */
 
 
 /*Jody ********************V  handleMenuChoice method  V************* 9-19-12 */
