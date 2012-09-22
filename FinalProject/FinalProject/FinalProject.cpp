@@ -137,7 +137,7 @@ void handleMenuChoice(int choice)
 /*Leah **************^   displayItems method   ^*********** DATE */ 
 
 
-/*Leah **************V   displayFile method   V*********** DATE */ 
+/*Leah **************V   displayFile method   V*********** 9-19-12 */ 
 //returns void and takes in a vector<string>
 //used to display all files in program
 //can be passed a fileHandler instance calling getFile() method
@@ -154,7 +154,7 @@ void displayFile(vector<string> &stringsToDisplay)
 }// end method
 
 
-/*Leah **************^   displayFile method   ^*********** DATE */ 
+/*Leah **************^   displayFile method   ^*********** 9-19-12 */ 
 
 
 
