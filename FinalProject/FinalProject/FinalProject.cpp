@@ -185,7 +185,7 @@ int searchFor(vector<string> &myStack){
 
 	for (size_t i = 0; i < myStack.size(); i++)
 	{
-		int x = myStack[1].find(findMe);
+		int x = myStack[i].find(findMe);
 		if (x > -1)
 		{
 			foundAt = i;
