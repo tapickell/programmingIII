@@ -16,8 +16,8 @@ using namespace std;
 
 /*declarations below go here. *********************/
 void handleMenuChoice(int choice);
-//void displayItems();
 void displayFile(vector<string> &stringsToDisplay);
+void displayItems();
 int searchFor(vector<string> &myStack);
 
 //int demonstration();
@@ -126,15 +126,22 @@ void handleMenuChoice(int choice)
 /*unassigned **************^   editItems method   ^*********** DATE */
 
 
-/*Leah **************V   displayItems method   V*********** DATE */ 
+/*Leah **************V   displayItems method   V*********** 9-25-12 */ 
 //returns void and takes in no params
 //this is a wrapper method that calls displayFile
 //passing a header fileHandler then calls th method again 
 //passing a store fileHandler
 
+//Calls the displayFile function which iterates through the vector of strings
+void displayItems()
+{
+	fileHandler myFile("STOREP");
+	displayFile(myFile.getFile());
+}
 
 
-/*Leah **************^   displayItems method   ^*********** DATE */ 
+
+/*Leah **************^   displayItems method   ^*********** 9-25-12 */ 
 
 
 /*Leah **************V   displayFile method   V*********** 9-19-12 */ 
