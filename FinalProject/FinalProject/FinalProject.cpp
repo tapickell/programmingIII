@@ -15,6 +15,7 @@ using namespace System;
 using namespace std;
 
 /*declarations below go here. *********************/
+int displayMenu();
 void handleMenuChoice(int choice);
 void displayFile(vector<string> &stringsToDisplay);
 void displayItems();
@@ -27,7 +28,10 @@ int main(array<System::String ^> ^args)
 {
 
 	/* we are not putting anything into here till iteration 2 */
+	/*Jody ******************** Main ********************* DATE */
+	
 
+	/*Jody ******************** Main ********************* DATE */
 
 	system("PAUSE");
 	return 0;
@@ -71,10 +75,10 @@ void handleMenuChoice(int choice)
 		//remove(); break;// Call REMOVE ITEM function, then break the switch
 
 	case 4: 	
-		//displayItems(); break;// Call DISPLAY function, then break the switch
+		displayItems(); break;// Call DISPLAY function, then break the switch
 
 	case 5: 		
-		//help(); break;// Call  HELP function, then break the switch
+		displayFile(HELP); break;// Call  HELP function, then break the switch
 
 	case 6: 
 		//exit(); break;//exit program
@@ -105,17 +109,17 @@ void handleMenuChoice(int choice)
 /*Elizabeth ********************^ itemsToStrings method ^************* DATE */
 
 
-/*unassigned ********************V add method V************* DATE */
+/*Elizabeth ********************V add method V************* DATE */
 //returns void and takes in no params
 //creates file handler to data file
 //prompts user for field input
 //writes vector<string> out to file
 
 
-/*unassigned ********************^ add method ^************* DATE */
+/*Elizabeth ********************^ add method ^************* DATE */
 
 
-/*unassigned **************V   editItems method  V *********** DATE */
+/*Leah **************V   editItems method  V *********** DATE */
 //returns void and takes in no params
 //this method will call search to get item number to edit
 //then display item to edit
@@ -123,7 +127,7 @@ void handleMenuChoice(int choice)
 //write changes to file
 
 
-/*unassigned **************^   editItems method   ^*********** DATE */
+/*Leah **************^   editItems method   ^*********** DATE */
 
 
 /*Leah **************V   displayItems method   V*********** 9-25-12 */ 
@@ -135,7 +139,9 @@ void handleMenuChoice(int choice)
 //Calls the displayFile function which iterates through the vector of strings
 void displayItems()
 {
-	fileHandler myFile("STOREP");
+	fileHandler myHeader(HEADERP);
+	displayFile(myHeader.getFile());
+	fileHandler myFile(STOREP);
 	displayFile(myFile.getFile());
 }
 
