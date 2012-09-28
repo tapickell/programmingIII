@@ -20,6 +20,7 @@ void handleMenuChoice(int choice);
 void displayFile(vector<string> &stringsToDisplay);
 void displayItems();
 int searchFor(vector<string> &myStack);
+void removeItem();
 
 //int demonstration();
 
@@ -29,8 +30,23 @@ int main(array<System::String ^> ^args)
 
 	/* we are not putting anything into here till iteration 2 */
 	/*Jody ******************** Main ********************* DATE */
-	
+	//read and display introduction
+	fileHandler introFile(INTROP);
+	displayFile(introFile.getFile());
 
+	//read and display 
+	displayItems();
+		
+	/*
+	want to do something like while !6 do handleMenuChoice 
+	*/
+	//get and handle menu choice 
+	int choice = 0;
+	while (choice != 6)
+	{
+		handleMenuChoice(displayMenu());	
+	}//end while loop
+	
 	/*Jody ******************** Main ********************* DATE */
 
 	system("PAUSE");
@@ -72,7 +88,7 @@ void handleMenuChoice(int choice)
 		//edit(); break;// Call EDIT function, then break the switch
 
 	case 3: 		
-		//remove(); break;// Call REMOVE ITEM function, then break the switch
+		removeItem(); break;// Call REMOVE ITEM function, then break the switch
 
 	case 4: 	
 		displayItems(); break;// Call DISPLAY function, then break the switch
@@ -81,7 +97,7 @@ void handleMenuChoice(int choice)
 		displayFile(HELP); break;// Call  HELP function, then break the switch
 
 	case 6: 
-		//exit(); break;//exit program
+		choice = 6; break;//exit program
 
 	default: 
 		cout << "Invalid number\n"; break;// Default to invalid number error statement
@@ -181,6 +197,39 @@ void displayFile(vector<string> &stringsToDisplay)
 //deletes item if user is sure
 //writes changes to file
 
+void removeItem()
+{
+	string removeItem;
+    		//creates a file handler to the data file (this works)
+    	fileHandler myFile(STOREP);
+    		//create an int to store an index number in
+	int myVal; 
+    		//create a vector<string> object
+	vector<string> myremoveItem;
+    		//assign (=) the output of myFile.getFile() to the vector<string> created above
+	myremoveItem = myFile.getFile();
+    		//assign (=) the output of searchFor( passing in your vector<string> here ) to the int created above
+	myVal = searchFor(myremoveItem);
+    		//creates a file handler to the HEADERP file *** just like above but different file ***
+	fileHandler myItem(HELP);
+    		//displays header file by calling display file
+	displayFile (myItem.getFile());
+    
+    		//displays item to be deleted *** the int created above is the index of the item ***
+	cout << myremoveItem[myVal] << endl;
+    		//prompts user are you sure?
+    	cout << endl << "Are you sure you want to remove item " << myVal << " ??? [REMOVE] or [CANCEL]"<< endl;
+    	cin >> removeItem; //this variable needs to be initialized before you can write to it
+    		//deletes item if user is sure
+    		//could use an if statement to test the removeItem variable
+	if (removeItem == "REMOVE")
+	{		
+    		//remove the element of the vector<string> at the index we got from searchFor
+		myremoveItem.erase(myVal);
+    		//writes changes to file
+		myFile.putFile(myremoveItem);
+	}
+}
 
 
 /*Nik **************^   removeItems method   ^*********** DATE */
