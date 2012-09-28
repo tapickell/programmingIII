@@ -210,24 +210,28 @@ void removeItem()
 	myremoveItem = myFile.getFile();
     		//assign (=) the output of searchFor( passing in your vector<string> here ) to the int created above
 	myVal = searchFor(myremoveItem);
+	
+	if (myVal > -1)
+	{
     		//creates a file handler to the HEADERP file *** just like above but different file ***
-	fileHandler myItem(HELP);
+		fileHandler myItem(HEADERP);
     		//displays header file by calling display file
-	displayFile (myItem.getFile());
+		displayFile (myItem.getFile());
     
     		//displays item to be deleted *** the int created above is the index of the item ***
-	cout << myremoveItem[myVal] << endl;
+		cout << myremoveItem[myVal] << endl;
     		//prompts user are you sure?
-    	cout << endl << "Are you sure you want to remove item " << myVal << " ??? [REMOVE] or [CANCEL]"<< endl;
-    	cin >> removeItem; //this variable needs to be initialized before you can write to it
+    		cout << endl << "Are you sure you want to remove item " << myVal << " ??? [REMOVE] or [CANCEL]"<< endl;
+    		cin >> removeItem; //this variable needs to be initialized before you can write to it
     		//deletes item if user is sure
     		//could use an if statement to test the removeItem variable
-	if (removeItem == "REMOVE")
-	{		
+		if (removeItem == "REMOVE")
+		{		
     		//remove the element of the vector<string> at the index we got from searchFor
-		myremoveItem.erase(myVal);
+			myremoveItem.erase(myVal);
     		//writes changes to file
-		myFile.putFile(myremoveItem);
+			myFile.putFile(myremoveItem);
+		}
 	}
 }
 
