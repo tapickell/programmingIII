@@ -37,9 +37,6 @@ int main(array<System::String ^> ^args)
 	//read and display 
 	displayItems();
 		
-	/*
-	want to do something like while !6 do handleMenuChoice 
-	*/
 	//get and handle menu choice 
 	int choice = 0;
 	while (choice != 6)
@@ -78,6 +75,8 @@ int displayMenu()
 //calls method according to int passed in
 void handleMenuChoice(int choice)
 {
+	fileHandler myHandle(HELP);
+
 	switch ( choice )
 	{         
 
@@ -93,8 +92,8 @@ void handleMenuChoice(int choice)
 	case 4: 	
 		displayItems(); break;// Call DISPLAY function, then break the switch
 
-	case 5: 		
-		displayFile(HELP); break;// Call  HELP function, then break the switch
+	case 5: 
+		displayFile(myHandle.getFile()); break;// Call  HELP function, then break the switch
 
 	case 6: 
 		choice = 6; break;//exit program
@@ -201,7 +200,7 @@ void removeItem()
 {
 	string removeItem;
     		//creates a file handler to the data file (this works)
-    	fileHandler myFile(STOREP);
+    fileHandler myFile(STOREP);
     		//create an int to store an index number in
 	int myVal; 
     		//create a vector<string> object
@@ -221,8 +220,8 @@ void removeItem()
     		//displays item to be deleted *** the int created above is the index of the item ***
 		cout << myremoveItem[myVal] << endl;
     		//prompts user are you sure?
-    		cout << endl << "Are you sure you want to remove item " << myVal << " ??? [REMOVE] or [CANCEL]"<< endl;
-    		cin >> removeItem; //this variable needs to be initialized before you can write to it
+    	cout << endl << "Are you sure you want to remove item " << myVal << " ??? [REMOVE] or [CANCEL]"<< endl;
+    	cin >> removeItem; //this variable needs to be initialized before you can write to it
     		//deletes item if user is sure
     		//could use an if statement to test the removeItem variable
 		if (removeItem == "REMOVE")
