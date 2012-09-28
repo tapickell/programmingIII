@@ -1,0 +1,9 @@
+*** Welcome to the Inventory Help System ***
+
+Add Items:      Allows you to add new item.
+Edit Items:     Allows you to change item already in the file.
+                Prompt will appear to input item number to search for.
+Remove Item:    Allows for the deletion of an item in the file that is no longer needed.
+View Inventory: Allows you to view the entire inventory on screen.
+Help:           Displays this information.
+Exit:           Saves any unsaved datat to file and ends the program.

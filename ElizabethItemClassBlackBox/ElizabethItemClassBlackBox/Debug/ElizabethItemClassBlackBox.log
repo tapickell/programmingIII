@@ -1,0 +1,110 @@
+﻿Build started 9/27/2012 2:29:41 PM.
+     1>Project "D:\tpickell\Documents\GitHub\programmingIII\ElizabethItemClassBlackBox\ElizabethItemClassBlackBox\ElizabethItemClassBlackBox.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\ElizabethItemClassBlackBox.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\ElizabethItemClassBlackBox.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt stdafx.cpp /clr:nostdlib 
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\ElizabethItemClassBlackBox.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt AssemblyInfo.cpp ElizabethItemClassBlackBox.cpp item.cpp /clr:nostdlib 
+         AssemblyInfo.cpp
+         ElizabethItemClassBlackBox.cpp
+     1>d:\tpickell\documents\github\programmingiii\elizabethitemclassblackbox\elizabethitemclassblackbox\item.h(38): warning C4200: nonstandard extension used : zero-sized array in struct/union
+                 Cannot generate copy-ctor or copy-assignment operator when UDT contains a zero-sized array
+     1>d:\tpickell\documents\github\programmingiii\elizabethitemclassblackbox\elizabethitemclassblackbox\item.h(39): error C2229: class 'item' has an illegal zero-sized array
+         item.cpp
+     1>d:\tpickell\documents\github\programmingiii\elizabethitemclassblackbox\elizabethitemclassblackbox\item.h(38): warning C4200: nonstandard extension used : zero-sized array in struct/union
+                 Cannot generate copy-ctor or copy-assignment operator when UDT contains a zero-sized array
+     1>d:\tpickell\documents\github\programmingiii\elizabethitemclassblackbox\elizabethitemclassblackbox\item.h(39): error C2229: class 'item' has an illegal zero-sized array
+     1>item.cpp(37): error C2511: 'item::item(int,std::string,std::string,std::string,std::string,std::string,std::string,std::string,std::string)' : overloaded member function not found in 'item'
+                 d:\tpickell\documents\github\programmingiii\elizabethitemclassblackbox\elizabethitemclassblackbox\item.h(36) : see declaration of 'item'
+     1>item.cpp(51): error C2556: 'int item::getItNum(void)' : overloaded function differs only by return type from 'std::string item::getItNum(void)'
+                 d:\tpickell\documents\github\programmingiii\elizabethitemclassblackbox\elizabethitemclassblackbox\item.h(53) : see declaration of 'item::getItNum'
+     1>item.cpp(51): error C2371: 'item::getItNum' : redefinition; different basic types
+                 d:\tpickell\documents\github\programmingiii\elizabethitemclassblackbox\elizabethitemclassblackbox\item.h(53) : see declaration of 'item::getItNum'
+     1>item.cpp(52): error C2059: syntax error : ']'
+     1>item.cpp(57): error C2511: 'void item::setItNum(int)' : overloaded member function not found in 'item'
+                 d:\tpickell\documents\github\programmingiii\elizabethitemclassblackbox\elizabethitemclassblackbox\item.h(36) : see declaration of 'item'
+     1>item.cpp(68): error C2059: syntax error : ']'
+     1>item.cpp(76): error C2440: '=' : cannot convert from 'std::string' to 'std::string [1]'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>item.cpp(77): error C2065: 'itNameString' : undeclared identifier
+     1>item.cpp(77): error C2228: left of '.size' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(79): error C2065: 'itNameString' : undeclared identifier
+     1>item.cpp(79): error C2228: left of '.copy' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(86): error C2065: 'whlslPrice' : undeclared identifier
+     1>item.cpp(86): error C2059: syntax error : ']'
+     1>item.cpp(92): error C2065: 'whlslPrice' : undeclared identifier
+     1>item.cpp(93): error C2065: 'whlslPriceString' : undeclared identifier
+     1>item.cpp(93): error C2228: left of '.size' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(95): error C2065: 'whlslPriceString' : undeclared identifier
+     1>item.cpp(95): error C2228: left of '.copy' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(96): error C2065: 'whlslPrice' : undeclared identifier
+     1>item.cpp(102): error C2059: syntax error : ']'
+     1>item.cpp(108): error C2440: '=' : cannot convert from 'std::string' to 'std::string [3]'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>item.cpp(109): error C2065: 'numHandString' : undeclared identifier
+     1>item.cpp(109): error C2228: left of '.size' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(111): error C2065: 'numHandString' : undeclared identifier
+     1>item.cpp(111): error C2228: left of '.copy' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(118): error C2059: syntax error : ']'
+     1>item.cpp(124): error C2440: '=' : cannot convert from 'std::string' to 'std::string [4]'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>item.cpp(125): error C2065: 'maxNumString' : undeclared identifier
+     1>item.cpp(125): error C2228: left of '.size' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(127): error C2065: 'maxNumString' : undeclared identifier
+     1>item.cpp(127): error C2228: left of '.copy' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(134): error C2059: syntax error : ']'
+     1>item.cpp(141): error C2440: '=' : cannot convert from 'std::string' to 'std::string [5]'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>item.cpp(142): error C2065: 'vendorNameString' : undeclared identifier
+     1>item.cpp(142): error C2228: left of '.size' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(144): error C2065: 'vendorNameString' : undeclared identifier
+     1>item.cpp(144): error C2228: left of '.copy' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(149): error C2653: 'reOrderNum' : is not a class or namespace name
+     1>item.cpp(151): error C2065: 'reOrderNum' : undeclared identifier
+     1>item.cpp(151): error C2059: syntax error : ']'
+     1>item.cpp(157): error C2440: '=' : cannot convert from 'std::string' to 'std::string [6]'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>item.cpp(158): error C2065: 'reOrderNumString' : undeclared identifier
+     1>item.cpp(158): error C2228: left of '.size' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(160): error C2065: 'reOrderNumString' : undeclared identifier
+     1>item.cpp(160): error C2228: left of '.copy' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(167): error C2059: syntax error : ']'
+     1>item.cpp(173): error C2440: '=' : cannot convert from 'std::string' to 'std::string [7]'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>item.cpp(174): error C2065: 'retPriceString' : undeclared identifier
+     1>item.cpp(174): error C2228: left of '.size' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(176): error C2065: 'retPriceString' : undeclared identifier
+     1>item.cpp(176): error C2228: left of '.copy' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(183): error C2059: syntax error : ']'
+     1>item.cpp(191): error C2440: '=' : cannot convert from 'std::string' to 'std::string [8]'
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>item.cpp(191): error C2144: syntax error : 'int' should be preceded by ';'
+     1>item.cpp(191): error C2065: 'deptNameString' : undeclared identifier
+     1>item.cpp(191): error C2228: left of '.size' must have class/struct/union
+                 type is ''unknown-type''
+     1>item.cpp(193): error C2065: 'deptNameString' : undeclared identifier
+     1>item.cpp(193): error C2228: left of '.copy' must have class/struct/union
+                 type is ''unknown-type''
+         Generating Code...
+     1>Done Building Project "D:\tpickell\Documents\GitHub\programmingIII\ElizabethItemClassBlackBox\ElizabethItemClassBlackBox\ElizabethItemClassBlackBox.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.51

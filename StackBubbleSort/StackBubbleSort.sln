@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StackBubbleSort", "StackBubbleSort\StackBubbleSort.vcxproj", "{140287D5-4C4C-4CB5-9A70-55212FC07FA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{140287D5-4C4C-4CB5-9A70-55212FC07FA8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{140287D5-4C4C-4CB5-9A70-55212FC07FA8}.Debug|Win32.Build.0 = Debug|Win32
+		{140287D5-4C4C-4CB5-9A70-55212FC07FA8}.Release|Win32.ActiveCfg = Release|Win32
+		{140287D5-4C4C-4CB5-9A70-55212FC07FA8}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

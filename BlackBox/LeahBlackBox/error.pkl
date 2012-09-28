@@ -1,0 +1,11 @@
+********  OOPS! **********
+
+Error: unable to load file from disk.
+I'm sorry, we appear to be in a pickle.
+
+Please check the store.pkl file for errors then reload the program.
+
+If this issue persists please contact application support.
+support@Prog3DevTeam.com
+
+*** Thank you for using the Awesome Grocery Inventory System ***

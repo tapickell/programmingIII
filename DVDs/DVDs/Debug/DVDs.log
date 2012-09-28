@@ -1,0 +1,97 @@
+﻿Build started 9/23/2012 6:04:33 PM.
+     1>Project "D:\tpickell\Documents\GitHub\programmingIII\DVDs\DVDs\DVDs.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\DVDs.unsuccessfulbuild".
+       GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       ClCompile:
+         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\DVDs.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt DVDs.cpp /clr:nostdlib 
+         DVDs.cpp
+     1>d:\tpickell\documents\github\programmingiii\dvds\dvds\dvd.h(32): error C2065: 'DVD' : undeclared identifier
+     1>d:\tpickell\documents\github\programmingiii\dvds\dvds\dvd.h(32): error C2065: 'Sample' : undeclared identifier
+     1>d:\tpickell\documents\github\programmingiii\dvds\dvds\dvd.h(32): error C2061: syntax error : identifier 'DVD'
+     1>d:\tpickell\documents\github\programmingiii\dvds\dvds\dvd.h(33): error C2065: 'Sample' : undeclared identifier
+     1>d:\tpickell\documents\github\programmingiii\dvds\dvds\dvd.h(34): error C2065: 'Sample' : undeclared identifier
+     1>d:\tpickell\documents\github\programmingiii\dvds\dvds\dvd.h(34): error C2227: left of '->Next' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>d:\tpickell\documents\github\programmingiii\dvds\dvds\dvd.h(35): error C2065: 'Sample' : undeclared identifier
+     1>d:\tpickell\documents\github\programmingiii\dvds\dvds\dvd.h(41): error C3861: 'getCount': identifier not found
+     1>DVDs.cpp(9): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(13): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(13): error C2061: syntax error : identifier 'DVDs'
+     1>DVDs.cpp(14): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(14): error C2227: left of '->DVDNumber' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>DVDs.cpp(15): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(15): error C2227: left of '->DVDName' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>DVDs.cpp(15): error C2660: 'strcpy_s' : function does not take 2 arguments
+     1>DVDs.cpp(16): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(18): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(18): error C2061: syntax error : identifier 'DVDs'
+     1>DVDs.cpp(19): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(19): error C2227: left of '->PartNumber' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>DVDs.cpp(20): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(20): error C2227: left of '->DVDName' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>DVDs.cpp(20): error C2660: 'strcpy_s' : function does not take 2 arguments
+     1>DVDs.cpp(21): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(23): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(23): error C2061: syntax error : identifier 'DVDs'
+     1>DVDs.cpp(24): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(24): error C2227: left of '->DVDNumber' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>DVDs.cpp(25): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(25): error C2227: left of '->DVDName' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>DVDs.cpp(25): error C2660: 'strcpy_s' : function does not take 2 arguments
+     1>DVDs.cpp(26): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(28): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(28): error C2061: syntax error : identifier 'DVDs'
+     1>DVDs.cpp(29): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(29): error C2227: left of '->DVDNumber' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>DVDs.cpp(30): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(30): error C2227: left of '->PartName' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>DVDs.cpp(30): error C2660: 'strcpy_s' : function does not take 2 arguments
+     1>DVDs.cpp(31): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(33): error C2039: 'getCount' : is not a member of 'ListofDVDs'
+                 d:\tpickell\documents\github\programmingiii\dvds\dvds\dvd.h(15) : see declaration of 'ListofDVDs'
+     1>DVDs.cpp(35): error C2065: 'i' : undeclared identifier
+     1>DVDs.cpp(35): error C2065: 'i' : undeclared identifier
+     1>DVDs.cpp(35): error C2039: 'getCount' : is not a member of 'ListofDVDs'
+                 d:\tpickell\documents\github\programmingiii\dvds\dvds\dvd.h(15) : see declaration of 'ListofDVDs'
+     1>DVDs.cpp(35): error C2065: 'i' : undeclared identifier
+     1>DVDs.cpp(37): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(37): error C2065: 'One' : undeclared identifier
+     1>DVDs.cpp(37): error C2065: 'i' : undeclared identifier
+     1>DVDs.cpp(39): error C2065: 'One' : undeclared identifier
+     1>DVDs.cpp(39): error C2227: left of '->DVDNumber' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>DVDs.cpp(40): error C2065: 'One' : undeclared identifier
+     1>DVDs.cpp(40): error C2227: left of '->DVDName' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>DVDs.cpp(44): error C2039: 'getCount' : is not a member of 'ListofDVDs'
+                 d:\tpickell\documents\github\programmingiii\dvds\dvds\dvd.h(15) : see declaration of 'ListofDVDs'
+     1>DVDs.cpp(46): error C2065: 'i' : undeclared identifier
+     1>DVDs.cpp(46): error C2065: 'i' : undeclared identifier
+     1>DVDs.cpp(46): error C2039: 'getCount' : is not a member of 'ListofDVDs'
+                 d:\tpickell\documents\github\programmingiii\dvds\dvds\dvd.h(15) : see declaration of 'ListofDVDs'
+     1>DVDs.cpp(46): error C2065: 'i' : undeclared identifier
+     1>DVDs.cpp(48): error C2065: 'DVD' : undeclared identifier
+     1>DVDs.cpp(48): error C2065: 'One' : undeclared identifier
+     1>DVDs.cpp(48): error C2065: 'i' : undeclared identifier
+     1>DVDs.cpp(50): error C2065: 'One' : undeclared identifier
+     1>DVDs.cpp(50): error C2227: left of '->DVDNumber' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>DVDs.cpp(51): error C2065: 'One' : undeclared identifier
+     1>DVDs.cpp(51): error C2227: left of '->DVDName' must point to class/struct/union/generic type
+                 type is ''unknown-type''
+     1>Done Building Project "D:\tpickell\Documents\GitHub\programmingIII\DVDs\DVDs\DVDs.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.45

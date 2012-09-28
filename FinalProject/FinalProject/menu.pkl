@@ -1,0 +1,9 @@
+Main Menu:
+1. Add Items
+2. Edit Item
+3. Remove Item
+4. View Inventory
+5. Help
+6. Exit
+
+Select option:

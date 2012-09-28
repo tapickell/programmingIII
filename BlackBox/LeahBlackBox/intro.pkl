@@ -1,0 +1,6 @@
+*** Welcome to the Awesome Grocery Inventory System ***
+
+-This program is creating an object for each line. All fields need to be input for
+each inventory item. The item number field must be greater than 1000. The necessary entries will include the following items: Item Number, Item Name, Wholesale Price, Number on Hand, Max Number, Vendor, Order Level, Retail Price, and Department. The users will be instructed on the
+procedure for exiting the program. The users will have a help file available that
+will list the instructions if needed.
