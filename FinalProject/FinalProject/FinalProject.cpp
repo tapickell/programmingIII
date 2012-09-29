@@ -21,15 +21,13 @@ void displayFile(vector<string> &stringsToDisplay);
 void displayItems();
 int searchFor(vector<string> &myStack);
 void removeItem();
+void editItem();
 
-//int demonstration();
-
-
+//main method
 int main(array<System::String ^> ^args)
 {
-
-	/* we are not putting anything into here till iteration 2 */
-	/*Jody ******************** Main ********************* DATE */
+	/*Jody ******************** Main ********************* 9-27-12 */
+	
 	//read and display introduction
 	fileHandler introFile(INTROP);
 	displayFile(introFile.getFile());
@@ -44,11 +42,11 @@ int main(array<System::String ^> ^args)
 		handleMenuChoice(displayMenu());	
 	}//end while loop
 	
-	/*Jody ******************** Main ********************* DATE */
+	/*Jody ******************** Main ********************* 9-27-12 */
 
 	system("PAUSE");
 	return 0;
-}
+}//end main
 
 /* *************  _-_--_--_--_V    FILL IN METHODS BELOW HERE   V _-_--_--_--_  ************** */
 
@@ -84,7 +82,7 @@ void handleMenuChoice(int choice)
 		//add(); break;// Call ADD function, then break the switch
 
 	case 2: 
-		//edit(); break;// Call EDIT function, then break the switch
+		editItem(); break;// Call EDIT function, then break the switch
 
 	case 3: 		
 		removeItem(); break;// Call REMOVE ITEM function, then break the switch
@@ -134,15 +132,35 @@ void handleMenuChoice(int choice)
 /*Elizabeth ********************^ add method ^************* DATE */
 
 
-/*Leah **************V   editItems method  V *********** DATE */
+/*Leah - Jody **************V   editItems method  V *********** 9-29-12 */
 //returns void and takes in no params
 //this method will call search to get item number to edit
 //then display item to edit
 //after user edits the new item can be saved into the vector
 //write changes to file
+void editItem()//returns void and takes no params
+{
+	fileHandler myFile(STOREP);//get file handler
+	vector<string> change = myFile.getFile();
+	int x = searchFor(change);//call search function
+	if (x > -1)
+	{
+		//passing a header fileHandler then calls the method again
+		fileHandler myFile2(HEADERP);
+		displayFile (myFile2.getFile());
+		cout<<change[x]<<endl;	
+		//allows the user to make changes
+		cout<<endl<<"Enter Changes: "<<endl;
+		displayFile(myFile2.getFile());
+		string c;//creates a string to save changes of user input
+		cin >> c;//input from user
+		change.at(x)= c;//call at method to replace info
+		myFile.putFile(change);//use file handler to add changes to the file
+	}
+}
 
 
-/*Leah **************^   editItems method   ^*********** DATE */
+/*Leah - Jody **************^   editItems method   ^*********** 9-29-12 */
 
 
 /*Leah **************V   displayItems method   V*********** 9-25-12 */ 
@@ -186,7 +204,7 @@ void displayFile(vector<string> &stringsToDisplay)
 
 
 
-/*Nik **************V   removeItems method   V*********** DATE */
+/*Nik - Todd **************V   removeItems method   V*********** 9-27-12 */
 //returns void and takes in no params
 //creates a file handler to the data file
 //calls search method and passes in vector<string> to get location of item in vector
@@ -220,8 +238,8 @@ void removeItem()
     		//displays item to be deleted *** the int created above is the index of the item ***
 		cout << myremoveItem[myVal] << endl;
     		//prompts user are you sure?
-    	cout << endl << "Are you sure you want to remove item " << myVal << " ??? [REMOVE] or [CANCEL]"<< endl;
-    	cin >> removeItem; //this variable needs to be initialized before you can write to it
+    		cout << endl << "Are you sure you want to remove item " << myVal << " ??? [REMOVE] or [CANCEL]"<< endl;
+    		cin >> removeItem; //this variable needs to be initialized before you can write to it
     		//deletes item if user is sure
     		//could use an if statement to test the removeItem variable
 		if (removeItem == "REMOVE")
@@ -235,7 +253,7 @@ void removeItem()
 }
 
 
-/*Nik **************^   removeItems method   ^*********** DATE */
+/*Nik - Todd **************^   removeItems method   ^*********** 9-27-12 */
 
 
 /*Todd **************V   search method   V*********** 9/14/12 */
