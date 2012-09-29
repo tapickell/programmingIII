@@ -245,7 +245,7 @@ void removeItem()
 		if (removeItem == "REMOVE")
 		{		
     		//remove the element of the vector<string> at the index we got from searchFor
-			myremoveItem.erase(myVal);
+			myremoveItem.erase(myremoveItem.begin()+myVal);
     		//writes changes to file
 			myFile.putFile(myremoveItem);
 		}
