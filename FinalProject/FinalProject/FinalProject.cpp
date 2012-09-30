@@ -24,7 +24,7 @@ void removeItem();
 void editItem();
 
 int kickMeOut = 0;
-
+ 
 //main method
 int main(array<System::String ^> ^args)
 {
@@ -126,11 +126,98 @@ void handleMenuChoice(int choice)
 
 
 /*Elizabeth ********************V add method V************* DATE */
-//returns void and takes in no params
-//creates file handler to data file
-//prompts user for field input
-//writes vector<string> out to file
+//returns void and takes in no params........DONE
+//creates file handler to data file...................NOT DONE!
+//prompts user for field input..........DONE
+//writes vector<string> out to file.............NOT DONE!
+	void addItems()
+	{
+		vector <string> stringItems;//create the vector for items
 
+		//create items for function
+		string itNum;
+		string itName;
+		string whlslPrice;
+		string numHand;
+		string maxNum;
+		string vendorName;
+		string reOrderNum;
+		string retPrice;
+		string deptName;
+
+		string tempString;//for exit
+
+		bool QUIT = false;// instructions to user state enter QUIT to return to menu
+
+		//NEED TO CHECK FOR USER ENTERING QUIT
+
+			while(!QUIT)
+			{
+				//user enters data in format of screen shots, flow chart and algorithm
+				cout << "Enter item number(0111 to 9999): \n";//wtf why is this limited to a max val
+				cin >> itNum;
+				cout << endl;
+				cout <<"Enter Item Name (up to 12 characters): ";
+				cin >>  itName;
+				cout << endl;
+				cout <<"Enter Wholesale Price (###.##): ";
+				cin >>  whlslPrice;
+				cout << endl;
+				cout <<"Enter number on hand (0111 to 9999): ";
+				cin >> numHand;
+				cout << endl;
+				cout <<"Enter Max number (0111 to 9999): ";
+				cin >> maxNum;
+				cout << endl;
+				cout << "Enter the Vendor Name(up to 16 characters):";
+				cin >>  vendorName;
+				cout << endl;
+				cout << "Enter Reorder Base Number(001 to 999): ";
+				cin >> reOrderNum;
+				cout << endl;
+				cout <<"Enter Retail Price (###.##): ";
+				cin >> retPrice;
+				cout << endl;
+				cout << "Enter Department Name (up to 12 characters): ";
+				cin >>  deptName;
+				cout << endl;
+				cout << endl << "Done?? Y/N: ";
+				cin >> tempString;
+				cout << endl;
+
+
+			//add items to the vector
+			stringItems.push_back(itNum);
+			stringItems.push_back(itName);
+			stringItems.push_back(whlslPrice);
+			stringItems.push_back(numHand);
+			stringItems.push_back(maxNum);
+			stringItems.push_back(vendorName);
+			stringItems.push_back(reOrderNum);
+			stringItems.push_back(retPrice);
+			stringItems.push_back(deptName);
+			}
+			//give user option to quit
+
+			if(QUIT)
+			{
+				cout << "whoops" << endl;//for testing purposes
+			//	displayMenu(); // commented because it will work when the program is put together
+			}
+			else
+			{
+				cerr;//wtf
+				system("pause");//nope
+			}
+
+			//this doesn't do anything!
+//commented out because it doesn't work....
+/*	vector<string> itemsToString(vector<string> &itemsIn)
+	{
+		vector<string>stringItems;
+	}
+	*/
+	}
 
 /*Elizabeth ********************^ add method ^************* DATE */
 
