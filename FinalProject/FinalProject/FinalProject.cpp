@@ -23,6 +23,8 @@ int searchFor(vector<string> &myStack);
 void removeItem();
 void editItem();
 
+int kickMeOut = 0;
+
 //main method
 int main(array<System::String ^> ^args)
 {
@@ -36,8 +38,8 @@ int main(array<System::String ^> ^args)
 	displayItems();
 		
 	//get and handle menu choice 
-	int choice = 0;
-	while (choice != 6)
+	
+	while (kickMeOut != 6)//flag not working. ** Fixed ** tpickell 9-29-12
 	{
 		handleMenuChoice(displayMenu());	
 	}//end while loop
@@ -60,9 +62,9 @@ int displayMenu()
     fileHandler myFile(MENUP);
     displayFile(myFile.getFile());
 
-    int choice = 0;
-    cin >> choice;
-    return choice;
+    int choices = 0;
+    cin >> choices;
+    return choices;
 }
 
 /*McKinley ********************^ displayMenu method ^************* 9-21-12 */
@@ -79,7 +81,8 @@ void handleMenuChoice(int choice)
 	{         
 
 	case 1: 					
-		//add(); break;// Call ADD function, then break the switch
+		//add(); 
+		break;// Call ADD function, then break the switch
 
 	case 2: 
 		editItem(); break;// Call EDIT function, then break the switch
@@ -94,7 +97,7 @@ void handleMenuChoice(int choice)
 		displayFile(myHandle.getFile()); break;// Call  HELP function, then break the switch
 
 	case 6: 
-		choice = 6; break;//exit program
+		kickMeOut = 6; break;//exit program
 
 	default: 
 		cout << "Invalid number\n"; break;// Default to invalid number error statement
