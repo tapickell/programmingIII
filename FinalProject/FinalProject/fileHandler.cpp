@@ -50,7 +50,7 @@ vector<string> fileHandler::getFile()
 	inFile.open(theFileName);
 	if (inFile.is_open())
 	{
-		cout << "Getting file..." << endl;
+		//cout << "Getting file..." << endl;
 		cout << endl;
 		while(!inFile.eof())
 		{

@@ -1,8 +1,9 @@
 // FinalProject.cpp : main project file.
+//This Works!
 
 #include "stdafx.h" //extra includes go in this file   <---#@#@#@#@
 #include "fileHandler.h"
-//#include "item.h"
+#include "item.h"
 
 #define STOREP "store.pkl"
 #define INTROP "intro.pkl"
@@ -22,6 +23,7 @@ void displayItems();
 int searchFor(vector<string> &myStack);
 void removeItem();
 void editItem();
+void addItems();
 
 int kickMeOut = 0;
 
@@ -81,8 +83,7 @@ void handleMenuChoice(int choice)
 	{         
 
 	case 1: 					
-		//add(); 
-		break;// Call ADD function, then break the switch
+		addItems(); break;// Call ADD function, then break the switch
 
 	case 2: 
 		editItem(); break;// Call EDIT function, then break the switch
@@ -97,7 +98,7 @@ void handleMenuChoice(int choice)
 		displayFile(myHandle.getFile()); break;// Call  HELP function, then break the switch
 
 	case 6: 
-		kickMeOut = 6; break;//exit program
+		kickMeOut = 6; break;//exit program   WORKS!
 
 	default: 
 		cout << "Invalid number\n"; break;// Default to invalid number error statement
@@ -112,7 +113,35 @@ void handleMenuChoice(int choice)
 //returns a vector<item> and takes in a vector<string>
 //converts params to proper format before calling the constructor passing in the formated params to create items.
 //pushes newly created items onto vector before returning
+vector<item> stringsToItems(vector<string> &myChangingArray)
+	{
+		vector<item> myItems;
 
+		//get strings from vector items
+		for(size_t x = 0; x < myChangingArray.size(); x++)
+		{
+			vector<string> myStack;
+        	//tokenizes string into separate items
+			//string *tokenString;
+			//String myCharStar = myChangingArray[x];
+			//tokenString = strtok(myCharStar, " "); //use for space separate format
+			//while (pkl != NULL)
+			//{
+			//	myStack.push_back(pkl);
+			//	pkl = strtok(NULL, " ");
+			//}
+
+			stringstream myStr(myChangingArray[x]);
+			myStr >> myStack[0] >> myStack[1] >> myStack[2] >> myStack[3] >> myStack[4] >> myStack[5] >> myStack[6] >> myStack[7] >> myStack[8];
+    
+			//create new inventory items from variables
+			item myItem = item(myStack[0], myStack[1], myStack[2], myStack[3], myStack[4], myStack[5], myStack[6], myStack[7], myStack[8]);
+
+			myItems.push_back(myItem);
+
+		}
+		return myItems;
+	}
 
 /*Elizabeth ********************^ stringsToItems method ^************* DATE */
 
@@ -120,16 +149,108 @@ void handleMenuChoice(int choice)
 /*Elizabeth ********************V itemsToStrings method V************* DATE */
 //returns a vector<string> and takes in a vector<item>
 //calls toString on each item in vector and pushes that onto vector of strings to be returned
+vector<string> itemsToString(vector<item> itemsForMe)
+{
+	vector<string> stringsForYou;
+	for (size_t i = 0; i < itemsForMe.size(); i++)
+	{
+		string temp = itemsForMe[i].toString();
+		stringsForYou.push_back(temp);
+	}
+	return stringsForYou;
+}
 
 
 /*Elizabeth ********************^ itemsToStrings method ^************* DATE */
 
 
 /*Elizabeth ********************V add method V************* DATE */
-//returns void and takes in no params
-//creates file handler to data file
-//prompts user for field input
-//writes vector<string> out to file
+//returns void and takes in no params.........DONE
+//creates file handler to data file.......NOT DONE
+//prompts user for field input........DONE
+//writes vector<string> out to file.........NOT DONE
+void addItems()
+	{
+		vector <string> stringItems;//create the vector for items
+
+		fileHandler myFile(STOREP);//get file handler
+		
+
+		//create items for function
+		string itNum;
+		string itName;
+		string whlslPrice;
+		string numHand;
+		string maxNum;
+		string vendorName;
+		string reOrderNum;
+		string retPrice;
+		string deptName;
+
+		string quit;
+
+		bool QUIT = false;// instructions to user state enter QUIT to return to menu
+
+			while(!QUIT)
+			{
+				vector<string> fileStrings = myFile.getFile();
+				//user enters data in format of screen shots, flow chart and algorithm
+				cout << "Enter item number(0111 to 9999): \n";
+				cin >> itNum;
+				cout << endl;
+				cout <<"Enter Item Name (up to 12 characters): ";
+				cin >>  itName;
+				cout << endl;
+				cout <<"Enter Wholesale Price (###.##): ";
+				cin >>  whlslPrice;
+				cout << endl;
+				cout <<"Enter number on hand (0111 to 9999): ";
+				cin >> numHand;
+				cout << endl;
+				cout <<"Enter Max number (0111 to 9999): ";
+				cin >> maxNum;
+				cout << endl;
+				cout << "Enter the Vendor Name(up to 16 characters):";
+				cin >>  vendorName;
+				cout << endl;
+				cout << "Enter Reorder Base Number(001 to 999): ";
+				cin >> reOrderNum;
+				cout << endl;
+				cout <<"Enter Retail Price (###.##): ";
+				cin >> retPrice;
+				cout << endl;
+				cout << "Enter Department Name (up to 12 characters): ";
+				cin >>  deptName;
+				cout << endl;
+				cout << "Done? type \"QUIT\" stop adding items.";
+				cin >> quit;
+
+				if (quit == "QUIT")
+				{
+					QUIT = true;
+				}
+
+
+			//add items to the vector
+			stringItems.push_back(itNum);
+			stringItems.push_back(itName);
+			stringItems.push_back(whlslPrice);
+			stringItems.push_back(numHand);
+			stringItems.push_back(maxNum);
+			stringItems.push_back(vendorName);
+			stringItems.push_back(reOrderNum);
+			stringItems.push_back(retPrice);
+			stringItems.push_back(deptName);
+			
+
+			item tempItem = item(stringItems[0], stringItems[1], stringItems[2], stringItems[3], stringItems[4], stringItems[5], stringItems[6], stringItems[7], stringItems[8]);
+
+			fileStrings.push_back(tempItem.toString());
+
+			myFile.putFile(fileStrings);
+
+			}
+	}
 
 
 /*Elizabeth ********************^ add method ^************* DATE */
@@ -141,7 +262,7 @@ void handleMenuChoice(int choice)
 //then display item to edit
 //after user edits the new item can be saved into the vector
 //write changes to file
-void editItem()//returns void and takes no params
+void editItem()//returns void and takes no params      FIXED :)
 {
 	fileHandler myFile(STOREP);//get file handler
 	vector<string> change = myFile.getFile();
@@ -155,9 +276,10 @@ void editItem()//returns void and takes no params
 		//allows the user to make changes
 		cout<<endl<<"Enter Changes: "<<endl;
 		displayFile(myFile2.getFile());
-		string c;//creates a string to save changes of user input
-		cin >> c;//input from user
-		change.at(x)= c;//call at method to replace info
+		string a, b, c, d, e, f, g, h, i;//creates a string to save changes of user input
+		cin >> a >> b >> c >> d >> e >> f >> g >> h >> i;//input from user
+		item myTempItem = item(a, b, c, d, e, f, g, h, i);
+		change.at(x)= myTempItem.toString();//call at method to replace info
 		myFile.putFile(change);//use file handler to add changes to the file
 	}
 }
@@ -283,4 +405,4 @@ int searchFor(vector<string> &myStack){
 	}
 	return foundAt;
 }//end searchFor
-/*Todd **************^   search method   ^*********** 9/14/12 */
+/*Todd **************^   search method   ^*********** 9/14/12 */	

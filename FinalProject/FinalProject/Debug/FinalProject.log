@@ -1,31 +1,32 @@
-﻿Build started 9/29/2012 3:18:54 PM.
-     1>Project "D:\tpickell\Documents\GitHub\programmingIII\FinalProject\FinalProject\FinalProject.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
-         Touching "Debug\FinalProject.unsuccessfulbuild".
-       GenerateTargetFrameworkMonikerAttribute:
-       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
-       ClCompile:
-         All outputs are up-to-date.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\FinalProject.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt FinalProject.cpp /clr:nostdlib 
-         FinalProject.cpp
-         All outputs are up-to-date.
-       ResourceCompile:
-         All outputs are up-to-date.
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\tpickell\Documents\GitHub\programmingIII\FinalProject\Debug\FinalProject.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\FinalProject.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\tpickell\Documents\GitHub\programmingIII\FinalProject\Debug\FinalProject.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
-         Debug\AssemblyInfo.obj
-         Debug\fileHandler.obj
-         Debug\FinalProject.obj
-         Debug\stdafx.obj
-         "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
-         FinalProject.vcxproj -> D:\tpickell\Documents\GitHub\programmingIII\FinalProject\Debug\FinalProject.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\tpickell\Documents\GitHub\programmingIII\FinalProject\Debug\FinalProject.exe;#1" /manifest Debug\FinalProject.exe.intermediate.manifest
-       FinalizeBuildStatus:
-         Deleting file "Debug\FinalProject.unsuccessfulbuild".
-         Touching "Debug\FinalProject.lastbuildstate".
-     1>Done Building Project "D:\tpickell\Documents\GitHub\programmingIII\FinalProject\FinalProject\FinalProject.vcxproj" (build target(s)).
+﻿Build started 10/1/2012 6:24:29 AM.
+Project "\\vmware-host\Shared Folders\Documents\GitHub\programmingIIIFinal\FinalProject\FinalProject\FinalProject.vcxproj" on node 2 (build target(s)).
+InitializeBuildStatus:
+  Creating "Debug\FinalProject.unsuccessfulbuild" because "AlwaysCreate" was specified.
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  All outputs are up-to-date.
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\FinalProject.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt FinalProject.cpp /clr:nostdlib 
+  FinalProject.cpp
+  All outputs are up-to-date.
+ResourceCompile:
+  All outputs are up-to-date.
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\vmware-host\Shared Folders\Documents\GitHub\programmingIIIFinal\FinalProject\Debug\FinalProject.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\FinalProject.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"\\vmware-host\Shared Folders\Documents\GitHub\programmingIIIFinal\FinalProject\Debug\FinalProject.pdb" /ASSEMBLYDEBUG /TLBID:1 /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\app.res
+  Debug\AssemblyInfo.obj
+  Debug\fileHandler.obj
+  Debug\FinalProject.obj
+  Debug\item.obj
+  Debug\stdafx.obj
+  "Debug\.NETFramework,Version=v4.0.AssemblyAttributes.obj"
+  FinalProject.vcxproj -> \\vmware-host\Shared Folders\Documents\GitHub\programmingIIIFinal\FinalProject\Debug\FinalProject.exe
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"\\vmware-host\Shared Folders\Documents\GitHub\programmingIIIFinal\FinalProject\Debug\FinalProject.exe;#1" /manifest Debug\FinalProject.exe.intermediate.manifest
+FinalizeBuildStatus:
+  Deleting file "Debug\FinalProject.unsuccessfulbuild".
+  Touching "Debug\FinalProject.lastbuildstate".
+Done Building Project "\\vmware-host\Shared Folders\Documents\GitHub\programmingIIIFinal\FinalProject\FinalProject\FinalProject.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.01
+Time Elapsed 00:00:05.67

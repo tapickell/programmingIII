@@ -16,5 +16,7 @@
 #include <string>
 #include <vector>
 #include <time.h>
+#include <sstream>
+#include <cstdlib>
 
 // TODO: reference additional headers your program requires here
