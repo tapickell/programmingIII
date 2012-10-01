@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 /* ***************************************************************************
 
 Programmer: Elizabeth Nenno
 
 Filename: item.h
 
+=======
+/* ***************************************************************************
+
+Programmer: Elizabeth Nenno
+
+Filename: item.h
+
+>>>>>>> f4d2595d0514d3ecc0e4be9f5af4637d58d4137b
 Requirements:	o	Create fields for items
 				o	Get input from user
 				o	Set the sizes of the items
 				o	Enter input into vector
+<<<<<<< HEAD
 
 
 Includes: fields for items, setting the sizes of items, changing to items, changing to strings, 
@@ -24,6 +34,24 @@ Description:  Setting sizes and items
 ************************************************************************* */
 
 #pragma once
+=======
+
+
+Includes: fields for items, setting the sizes of items, changing to items, changing to strings, 
+			entering strings into vector
+
+Course: CISS 243A C++ Programming III
+
+Date: 9/18/2012
+
+Assignment: Final Project
+
+Description:  Setting sizes and items
+
+************************************************************************* */
+
+#pragma once
+>>>>>>> f4d2595d0514d3ecc0e4be9f5af4637d58d4137b
 #ifndef item_h
 #define item_h
 
@@ -33,6 +61,12 @@ using namespace std;
 class item
 {
 private:
+<<<<<<< HEAD
+=======
+
+
+	public:
+>>>>>>> f4d2595d0514d3ecc0e4be9f5af4637d58d4137b
 	string ItNum;
 	string ItName;
 	string WhlslPrice;
@@ -42,9 +76,12 @@ private:
 	string ReOrderNum;
 	string RetPrice;
 	string DeptName;
+<<<<<<< HEAD
 
 public:
 
+=======
+>>>>>>> f4d2595d0514d3ecc0e4be9f5af4637d58d4137b
 	//constructor
 	item();
 	item(string, string, string, string, string, string, string, string, string); //default constructor
@@ -85,7 +122,12 @@ public:
 	void setDeptName(string);
 	string getDeptName();
 
+<<<<<<< HEAD
 	string toString();
 
 };//end class - item
 #endif
+=======
+};//end class - item
+#endif
+>>>>>>> f4d2595d0514d3ecc0e4be9f5af4637d58d4137b

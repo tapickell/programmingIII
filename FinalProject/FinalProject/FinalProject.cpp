@@ -26,7 +26,7 @@ void editItem();
 void addItems();
 
 int kickMeOut = 0;
-
+ 
 //main method
 int main(array<System::String ^> ^args)
 {
@@ -165,6 +165,7 @@ vector<string> itemsToString(vector<item> itemsForMe)
 
 
 /*Elizabeth ********************V add method V************* DATE */
+<<<<<<< HEAD
 //returns void and takes in no params.........DONE
 //creates file handler to data file.......NOT DONE
 //prompts user for field input........DONE
@@ -176,6 +177,16 @@ void addItems()
 		fileHandler myFile(STOREP);//get file handler
 		
 
+=======
+//returns void and takes in no params........DONE
+//creates file handler to data file...................NOT DONE!
+//prompts user for field input..........DONE
+//writes vector<string> out to file.............NOT DONE!
+	void addItems()
+	{
+		vector <string> stringItems;//create the vector for items
+
+>>>>>>> f4d2595d0514d3ecc0e4be9f5af4637d58d4137b
 		//create items for function
 		string itNum;
 		string itName;
@@ -187,6 +198,7 @@ void addItems()
 		string retPrice;
 		string deptName;
 
+<<<<<<< HEAD
 		string quit;
 
 		bool QUIT = false;// instructions to user state enter QUIT to return to menu
@@ -196,6 +208,18 @@ void addItems()
 				vector<string> fileStrings = myFile.getFile();
 				//user enters data in format of screen shots, flow chart and algorithm
 				cout << "Enter item number(0111 to 9999): \n";
+=======
+		string tempString;//for exit
+
+		bool QUIT = false;// instructions to user state enter QUIT to return to menu
+
+		//NEED TO CHECK FOR USER ENTERING QUIT
+
+			while(!QUIT)
+			{
+				//user enters data in format of screen shots, flow chart and algorithm
+				cout << "Enter item number(0111 to 9999): \n";//wtf why is this limited to a max val
+>>>>>>> f4d2595d0514d3ecc0e4be9f5af4637d58d4137b
 				cin >> itNum;
 				cout << endl;
 				cout <<"Enter Item Name (up to 12 characters): ";
@@ -222,6 +246,7 @@ void addItems()
 				cout << "Enter Department Name (up to 12 characters): ";
 				cin >>  deptName;
 				cout << endl;
+<<<<<<< HEAD
 				cout << "Done? type \"QUIT\" stop adding items.";
 				cin >> quit;
 
@@ -229,6 +254,11 @@ void addItems()
 				{
 					QUIT = true;
 				}
+=======
+				cout << endl << "Done?? Y/N: ";
+				cin >> tempString;
+				cout << endl;
+>>>>>>> f4d2595d0514d3ecc0e4be9f5af4637d58d4137b
 
 
 			//add items to the vector
@@ -241,6 +271,7 @@ void addItems()
 			stringItems.push_back(reOrderNum);
 			stringItems.push_back(retPrice);
 			stringItems.push_back(deptName);
+<<<<<<< HEAD
 			
 
 			item tempItem = item(stringItems[0], stringItems[1], stringItems[2], stringItems[3], stringItems[4], stringItems[5], stringItems[6], stringItems[7], stringItems[8]);
@@ -252,6 +283,30 @@ void addItems()
 			}
 	}
 
+=======
+			}
+			//give user option to quit
+
+			if(QUIT)
+			{
+				cout << "whoops" << endl;//for testing purposes
+			//	displayMenu(); // commented because it will work when the program is put together
+			}
+			else
+			{
+				cerr;//wtf
+				system("pause");//nope
+			}
+
+			//this doesn't do anything!
+//commented out because it doesn't work....
+/*	vector<string> itemsToString(vector<string> &itemsIn)
+	{
+		vector<string>stringItems;
+	}
+	*/
+	}
+>>>>>>> f4d2595d0514d3ecc0e4be9f5af4637d58d4137b
 
 /*Elizabeth ********************^ add method ^************* DATE */
 
